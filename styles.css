@@ -1,0 +1,213 @@
+* {
+  font-family: Sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.42857143;
+  color: #333;
+}
+.gid-block__container {
+  width: 1140px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carusel-gid_main-container {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 90px 0 90px;
+}
+
+/* контейнер карт */
+.carusel-gid__container {
+  margin-top: 10px;
+  width: calc(530px * 17 + 30px);
+  height: 550px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: all 1s ease;
+}
+
+.carusel-gid__gid-card:nth-child(1) img {
+  object-position: 0px -60px;
+}
+
+.carusel-gid__gid-card:nth-child(8) img {
+  object-position: 0px -40px;
+}
+
+.carusel-gid_title {
+  width: 100%;
+  color: #fff;
+  padding: 15px 20px;
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #045857;
+  border-radius: 0px;
+  margin-bottom: 0;
+}
+
+.carusel-gid_about__gids {
+  font-weight: 600;
+  font-size: 18px;
+}
+.carusel-gid_about__gids {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+/* карта */
+.carusel-gid__gid-card {
+  border-radius: 10px;
+  min-width: 380px;
+  height: 520px;
+  display: flex;
+  margin-right: 150px;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.carusel-gid__gid-card:hover {
+  box-shadow: 3px -3px 7px gray, 3px -3px 15px gray;
+  height: 523px;
+}
+
+.carusel-gid__gid-photo {
+  border-radius: 50%;
+  width: 270px;
+  height: 270px;
+  object-position: 0 -4px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.carusel-gid_card-title {
+  border-radius: 30px;
+  width: 80%;
+  height: 30px;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.carusel-gid_card__gid-edu {
+  margin-bottom: 10px;
+}
+
+.carusel-gid_card__gid-edu,
+.carusel-gid__gid-credo {
+  text-align: center;
+}
+
+.prev-gid-card {
+  position: absolute;
+  top: 350px;
+  left: 5px;
+  transition: all 0.5s ease;
+}
+
+.next-gid-card {
+  position: absolute;
+  top: 350px;
+  right: 30px;
+  transition: all 0.5s ease;
+}
+
+.prev-gid-card img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background-color: #3ed363;
+  opacity: 0.9;
+}
+
+.next-gid-card img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background-color: #3ed363;
+  opacity: 0.9;
+}
+
+.prev-gid-card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.next-gid-card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1140px) {
+  .gid-block__container {
+    width: 100%;
+  }
+  .carusel-gid__gid-card {
+    margin-right: calc(528px / 5);
+  }
+  .prev-gid-card,
+  .next-gid-card {
+    top: 250px;
+  }
+}
+
+@media screen and (max-width: 952px) {
+  .carusel-gid__gid-card {
+    margin-right: calc(384px / 5);
+  }
+}
+
+@media screen and (max-width: 922px) {
+  .carusel-gid__gid-card {
+    margin-right: calc(324px / 5);
+  }
+  .carusel-gid_main-container {
+    padding: 0 90px 0 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .carusel-gid__gid-card {
+    margin-right: calc(387px / 2 + 5px);
+  }
+  .carusel-gid_main-container {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 493px) {
+  .carusel-gid__gid-card {
+    height: 540px;
+  }
+  .carusel-gid_card__gid-edu,
+  .carusel-gid__gid-credo {
+    font-size: 17px;
+  }
+}
